@@ -7,7 +7,6 @@ namespace Lab23
         static void Main(string[] args)
         { 
             // Task1. Singleton
-            Console.WriteLine("Завдання 1: Singleton");
             Logger logger1 = Logger.Instance;
             Logger logger2 = Logger.Instance;
             logger1.Log("Перше повідомлення");
@@ -15,7 +14,6 @@ namespace Lab23
             Console.WriteLine($"Один екземпляр: {ReferenceEquals(logger1, logger2)}"); Console.WriteLine();
 
             // Task2. Factory Method
-            Console.WriteLine("Завдання 2: Factory Method");
             Console.Write("Тип повідомлення (email/sms/push): ");
             string type = Console.ReadLine();
             INotification notification = NotificationFactory.Create(type);
@@ -23,7 +21,6 @@ namespace Lab23
             Console.WriteLine();
 
             // Task3. Builder
-            Console.WriteLine("Завдання 3: Builder");
             ComputerBuilder builder = new ComputerBuilder();
             Computer gamingPC = builder
                 .SetCPU("Intel i9")
